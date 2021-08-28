@@ -15,9 +15,9 @@ const weatherService = ({ latitude, longitude } = {}, callback) => {
       );
       return;
     }
-    const { temperature, feelslike, weather_descriptions } = body.current;
+    const { temperature, feelslike, weather_descriptions, humidity } = body.current;
     const weatherDescription = weather_descriptions[0];
-    const data = `${weatherDescription}. It is currently ${temperature} degrees out. It feels like ${feelslike} degrees out.`;
+    const data = `${weatherDescription}. It is currently ${temperature} degrees out. It feels like ${feelslike} degrees out. The humidity is ${humidity}%.`;
     callback(undefined, data);
   });
 };
