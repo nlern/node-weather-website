@@ -2,7 +2,7 @@ const getWeatherData = async (address) => {
   let res;
   let data;
   try {
-    res = await fetch(`http://localhost:3000/weather?address=${address}`);
+    res = await fetch(`/weather?address=${address}`);
   } catch (error) {
     throw new Error('Failed to fetch details.');
   }
